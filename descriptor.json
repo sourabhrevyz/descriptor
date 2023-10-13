@@ -1,0 +1,32 @@
+{
+    "key": "your-app-key",
+    "name": "Your App Name",
+    "baseUrl": "https://your-app-url.com",
+    "description": "A brief description of your Jira Connect app",
+    "vendor": {
+      "name": "Your Company Name",
+      "url": "https://your-company-website.com"
+    },
+    "authentication": {
+      "type": "jwt"
+    },
+    "lifecycle": {
+      "installed": "/installed",
+      "uninstalled": "/uninstalled"
+    },
+    "apiVersion": 1,
+    "modules": {
+      "dynamicContentMacros": [
+        {
+          "url": "/macro",
+          "key": "macro-key",
+          "name": {
+            "value": "Macro Name"
+          }
+        }
+      ]
+    },
+    "scopes": ["read", "write"],
+    "contexts": ["project", "issue"]
+  }
+  
