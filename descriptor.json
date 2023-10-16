@@ -1,32 +1,54 @@
 {
-    "key": "your-app-key",
-    "name": "Your App Name",
-    "baseUrl": "https://your-app-url.com",
-    "description": "A brief description of your Jira Connect app",
-    "vendor": {
-      "name": "Your Company Name",
-      "url": "https://your-company-website.com"
-    },
-    "authentication": {
-      "type": "jwt"
-    },
-    "lifecycle": {
-      "installed": "/installed",
-      "uninstalled": "/uninstalled"
-    },
-    "apiVersion": 1,
-    "modules": {
-      "dynamicContentMacros": [
-        {
-          "url": "/macro",
-          "key": "macro-key",
-          "name": {
-            "value": "Macro Name"
-          }
+  "id": 1,
+  "key": "rvzio-my-jakit-app",
+  "name": "Jakit App",
+  "baseUrl": "https://distinctly-awaited-sunbeam.ngrok-free.app",
+  "description": "Demo App",
+  "vendor": {
+    "name": "Revyz Inc",
+    "url": "https://www.revyz.io"
+  },
+  "authentication": {
+    "type": "none"
+  },
+  "webSections":[
+    {
+      "key":"rvzio-my-jakit-app",
+      "location":"menu",
+      "name":{
+        "value":"Jakit"
+      }
+    }
+  ],
+  "adminPages": [
+    {
+      "url": "/about",
+      "key": "about-page",
+      "name": {
+        "value": "App"
+      }
+    }
+  ],
+  "apiVersion": 1,
+  "modules": {
+    "generalPages": [
+      {
+        "url": "/about",
+        "key": "about-page",
+        "name": {
+          "value": "Jakit"
         }
-      ]
-    },
-    "scopes": ["read", "write"],
-    "contexts": ["project", "issue"]
+      }
+    ]
+  },
+  "scopes": [
+    "ADMIN"
+  ],
+  "contexts": [
+    "project",
+    "issue"
+  ],
+  "apiMigrations": {
+    "signed-install": true
   }
-  
+}
